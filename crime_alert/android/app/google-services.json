@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "50633934192",
+    "project_id": "crimealert-d0a3f",
+    "storage_bucket": "crimealert-d0a3f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50633934192:android:a02239790876d50f697bb5",
+        "android_client_info": {
+          "package_name": "com.crimealert.crime_alert_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7nDe_O8_t4wT2pKT9fn863G336qcN7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50633934192:android:1ad5eca1030b9e77697bb5",
+        "android_client_info": {
+          "package_name": "com.example.crime_alert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7nDe_O8_t4wT2pKT9fn863G336qcN7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

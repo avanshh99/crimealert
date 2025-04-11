@@ -1,0 +1,39 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'  // Firebase services
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.crime_alert"
+    compileSdk = 34  // Specify the compile SDK version explicitly
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.crime_alert"
+        minSdkVersion flutter.minSdkVersion  // 🔹 Change this from flutter.minSdkVersion to 20
+        targetSdkVersion 34  // Explicitly set target SDK
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
