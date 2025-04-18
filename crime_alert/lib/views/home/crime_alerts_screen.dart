@@ -297,7 +297,7 @@ void _setupReportsStream() {
   Future<String> _getAddressFromLatLng(double lat, double lng) async {
     try {
       final apiKey =
-          "AIzaSyBZFVz_dHpmtiJbjIyipcJgiCQ173xYylE"; // Replace with your API Key
+          "apikey"; // Replace with your API Key
       final url = Uri.parse(
           "https://maps.googleapis.com/maps/api/geocode/json?latlng=$lat,$lng&key=$apiKey");
 

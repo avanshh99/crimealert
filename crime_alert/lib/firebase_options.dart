@@ -22,15 +22,11 @@ class DefaultFirebaseOptions {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
-      case TargetPlatform.iOS:
-        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
-      case TargetPlatform.windows:
-        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -44,7 +40,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCSsiwDOtCacBnkLxhGaqtMcHmoTQM1wtQ',
+    apiKey: 'placeholder',
     appId: '1:50633934192:web:6424d4373992826b697bb5',
     messagingSenderId: '50633934192',
     projectId: 'crimealert-d0a3f',
@@ -54,29 +50,10 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBk7nDe_O8_t4wT2pKT9fn863G336qcN7o',
+    apiKey: 'placeholder',
     appId: '1:50633934192:android:1ad5eca1030b9e77697bb5',
     messagingSenderId: '50633934192',
     projectId: 'crimealert-d0a3f',
     storageBucket: 'crimealert-d0a3f.firebasestorage.app',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDhSOZopyGS-Jy6ZJSaV6p5K8eVbu34Dss',
-    appId: '1:50633934192:ios:568dd74a386b4ed0697bb5',
-    messagingSenderId: '50633934192',
-    projectId: 'crimealert-d0a3f',
-    storageBucket: 'crimealert-d0a3f.firebasestorage.app',
-    iosBundleId: 'com.example.crimeAlert',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCSsiwDOtCacBnkLxhGaqtMcHmoTQM1wtQ',
-    appId: '1:50633934192:web:5fd08e4f11e6f333697bb5',
-    messagingSenderId: '50633934192',
-    projectId: 'crimealert-d0a3f',
-    authDomain: 'crimealert-d0a3f.firebaseapp.com',
-    storageBucket: 'crimealert-d0a3f.firebasestorage.app',
-    measurementId: 'G-M01FYYRE12',
   );
 }
