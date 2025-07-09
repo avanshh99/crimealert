@@ -1,153 +1,159 @@
-# Crime Alert
+# 🚨 Crime Alert
 
-Crime Alert is a Flutter-based mobile application designed to report and track crimes in real-time. The app allows users to submit crime reports, view crime alerts on a map, and manage their profiles. It integrates with Firebase for authentication, Firestore for data storage, and Google Maps for location-based features.
+**Real-Time Crime Reporting & Community Safety App**  
+*Empowering Communities. Enhancing Safety.*
 
-## Features
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
+[![Platform](https://img.shields.io/badge/platform-Flutter-blueviolet)](#)
 
-- **Crime Reporting**: Users can report crimes by providing details such as location, type of crime, description, and evidence (images or files).
-- **Real-Time Alerts**: View crime alerts on a map with markers for reported incidents.
-- **User Profiles**: Manage user profiles, including updating personal information and profile pictures.
-- **SOS Messaging**: Send emergency SOS messages to predefined contacts or authorities.
-- **Post Feed**: Share and view posts related to community safety and crime prevention.
+---
 
-## Installation
+## 📋 Table of Contents
 
-1. Clone the repository:
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [APIs Used](#apis-used)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
+
+---
+
+## ✨ Features
+
+- 📝 **Crime Reporting:** Submit detailed crime reports with location, type, description, and evidence.
+- 🗺️ **Real-Time Alerts:** View crime alerts on a live map with incident markers.
+- 👤 **User Profiles:** Manage and update your profile and personal info.
+- 🚨 **SOS Messaging:** Instantly send emergency SOS messages to contacts or authorities.
+- 📰 **Post Feed:** Share & view posts related to safety and crime prevention.
+
+---
+
+## 📱 Screenshots
+
+> _UI of my Catch-Crime App!_
+
+| Home Page | Crime Location | Profile Section |
+|:-------------:|:--------------:|:-----------:|
+| ![Home](app-images/cover.png) | ![Crime location](app-images/map-view.png) | ![Profile](app-images/profile.png) |
+
+---
+
+## 🚀 Installation
+
+1. **Clone the repository:**
    ```sh
    git clone https://github.com/your-username/crime-alert.git
    cd crime-alert
    ```
 
-2. Install dependencies:
+2. **Install dependencies:**
    ```sh
    flutter pub get
    ```
 
-3. Configure Firebase:
-   - Add your `google-services.json` file to the `android/app` directory.
-   - Add your `GoogleService-Info.plist` file to the `ios/Runner` directory.
+3. **Configure Firebase:**
+   - Add your `google-services.json` to `android/app/`
+   - Add your `GoogleService-Info.plist` to `ios/Runner/`
 
-4. Run the app:
+4. **Run the app:**
    ```sh
    flutter run
    ```
 
-## Project Structure
+---
+
+## 🗂️ Project Structure
 
 ```
 crime_alert/
-├── android/                # Android-specific files
-├── ios/                    # iOS-specific files
-├── lib/                    # Main Flutter application code
-│   ├── views/              # UI screens
-│   ├── models/             # Data models
-│   ├── services/           # Firebase and other service integrations
-│   └── widgets/            # Reusable UI components
-├── assets/                 # Static assets (images, icons, etc.)
-├── test/                   # Unit and widget tests
-├── pubspec.yaml            # Flutter dependencies
-└── README.md               # Project documentation
+├── android/
+├── ios/
+├── lib/
+│   ├── views/
+│   ├── models/
+│   ├── services/
+│   └── widgets/
+├── assets/
+├── test/
+├── pubspec.yaml
+└── README.md
 ```
 
-## Dependencies
+---
 
-The project uses the following key dependencies:
+## 📦 Dependencies
 
-- **Firebase**:
-  - `firebase_core`
-  - `firebase_auth`
-  - `cloud_firestore`
-  - `firebase_storage`
-- **Google Maps**:
-  - `google_maps_flutter`
-- **Location Services**:
-  - `geolocator`
-  - `geocoding`
-- **Media Handling**:
-  - `image_picker`
-  - `flutter_image_compress`
-- **UI Enhancements**:
-  - `fluttertoast`
-  - `intl`
+- **Firebase:** `firebase_core`, `firebase_auth`, `cloud_firestore`, `firebase_storage`
+- **Google Maps:** `google_maps_flutter`
+- **Location:** `geolocator`, `geocoding`
+- **Media:** `image_picker`, `flutter_image_compress`
+- **UI:** `fluttertoast`, `intl`
 
-For a full list of dependencies, see the [pubspec.yaml](pubspec.yaml) file.
+_For a full list, see [pubspec.yaml](pubspec.yaml)_
 
+---
 
-## APIs Used
+## 🌐 APIs Used
 
-The application integrates with the following APIs:
+- **Firebase APIs:** Auth, Firestore, Storage
+- **Google Maps API:** Location & mapping
+- **Geocoding API:** Address conversion
+- **Custom SMS API:**  
+  ```
+  POST http://192.168.156.1:5000/send-sms
+  Content-Type: application/json
+  {
+    "to": "+1234567890",
+    "message": "SOS! Immediate Help Required. Location: Lat: 12.9716, Long: 77.5946"
+  }
+  ```
+  **Response:**
+  ```json
+  {
+    "status": "success",
+    "message": "SMS sent successfully"
+  }
+  ```
 
-1. **Firebase APIs**:
-   - Firebase Authentication for user login and registration.
-   - Firestore for storing and retrieving crime reports and user data.
-   - Firebase Storage for uploading and retrieving media files.
+---
 
-2. **Google Maps API**:
-   - Used for displaying crime locations on a map and providing geolocation services.
+## 🛠️ Usage
 
-3. **Geocoding API**:
-   - Converts latitude and longitude into human-readable addresses.
+- **Report a Crime:** Go to "Crime Report", fill details, attach evidence, and submit.
+- **View Alerts:** Home screen displays crime markers on the map.
+- **Manage Profile:** Update info in the "Account" screen.
+- **Send SOS:** Use the "SOS" feature for emergencies.
 
-4. **Custom SMS API**:
-   - A custom API hosted at `http://192.168.156.1:5000/send-sms` for sending SOS messages to predefined contacts or authorities.
+---
 
-   **Example Request**:
-   ```json
-   POST http://192.168.156.1:5000/send-sms
-   Content-Type: application/json
+## 🤝 Contributing
 
-   {
-     "to": "+1234567890",
-     "message": "SOS! Immediate Help Required. Location: Lat: 12.9716, Long: 77.5946"
-   }
-   ```
-
-   **Response**:
-   ```json
-   {
-     "status": "success",
-     "message": "SMS sent successfully"
-   }
-   ```
-
-## Usage
-
-1. **Report a Crime**:
-   - Navigate to the "Crime Report" screen.
-   - Fill in the details, attach evidence, and submit the report.
-
-2. **View Crime Alerts**:
-   - Open the home screen to view crime markers on the map.
-
-3. **Manage Profile**:
-   - Go to the "Account" screen to update your profile information.
-
-4. **Send SOS**:
-   - Use the "SOS" feature to send emergency messages.
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
+Contributions are welcome!  
+1. Fork the repo  
+2. Create a branch:
    ```sh
    git checkout -b feature-name
    ```
-3. Commit your changes and push to your fork:
+3. Commit & push:
    ```sh
    git commit -m "Add feature-name"
    git push origin feature-name
    ```
-4. Open a pull request.
+4. Open a pull request
 
+---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - [Flutter](https://flutter.dev/)
 - [Firebase](https://firebase.google.com/)
 - [Google Maps](https://developers.google.com/maps)
 
-## Contact
+---
 
-For questions or support, please contact [avanshetty196@gmail.com].
+> _Empowering safer communities, one alert at a time._ 🚨
