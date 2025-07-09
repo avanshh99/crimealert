@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 
 class FirebaseConfig {
   static final FirebaseOptions firebaseOptions = FirebaseOptions(
-      apiKey: 'placeholder',
+      apiKey: 'AIzaSyCSsiwDOtCacBnkLxhGaqtMcHmoTQM1wtQ',
       appId: '1:50633934192:web:9f767143ef1d937a697bb5',
       messagingSenderId: '50633934192',
       projectId: 'crimealert-d0a3f',

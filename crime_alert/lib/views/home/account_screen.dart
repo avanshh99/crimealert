@@ -481,8 +481,8 @@ class _AccountScreenState extends State<AccountScreen> {
           onChanged: (value) => setState(() => sosEnabled = value),
         ),
         _buildListTile(
-          Icons.edit,
-          'Edit SOS Message Content',
+          Icons.send,
+          'Send SOS Message',
           () => Navigator.push(
             context,
             MaterialPageRoute(
