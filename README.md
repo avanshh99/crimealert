@@ -148,12 +148,5 @@ Contributions are welcome!
 
 ---
 
-## 🙏 Acknowledgments
-
-- [Flutter](https://flutter.dev/)
-- [Firebase](https://firebase.google.com/)
-- [Google Maps](https://developers.google.com/maps)
-
----
 
 > _Empowering safer communities, one alert at a time._ 🚨
